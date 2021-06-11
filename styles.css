@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.intro-main-container {
+  height: 70vh;
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  width: 100%;
+  border-bottom-left-radius: 100px;
+}
+
+.intro {
+  height: 100%;
+  width: 100%;
+  background-image: url(images/bg-pattern-intro.svg);
+  background-position: center;
+  border-bottom-left-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 5%;
+}
+
+.logo {
+  float: left;
+  font-family: overpass, sans-serif;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  margin: 0.5rem 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+nav ul li a {
+  font-family: ubuntu, sans-serif;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li.sub-menu::before {
+  content: url(images/icon-arrow-light.svg);
+  position: absolute;
+  right: -20px;
+  transition: 300ms;
+}
+
+.navigation nav ul li ul {
+  position: absolute;
+  left: 0;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  line-height: 1.5;
+  display: none;
+}
+
+.navigation nav ul li.active ul {
+  display: block;
+}
+
+.navigation nav ul li.active::before {
+  content: url(images/icon-arrow-light.svg);
+  transform: rotate(180deg);
+  transition: 300ms;
+}
+
+.navigation nav ul li ul li a {
+  color: black;
+  font-weight: 400;
+}
+
+.navigation nav ul li ul li a:hover {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navigation nav ul li ul li {
+  display: block;
+  width: 100%;
+}
+
+button {
+  font-family: ubuntu, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.login {
+  background: none;
+  color: hsl(0, 0%, 100%);
+}
+
+.white-btn {
+  background: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+}
+
+.white-btn:hover {
+  background: hsla(0, 0%, 100%, 30%);
+  color: hsl(0, 0%, 100%);
+}
+
+.menu-toggle {
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.intro-txt {
+  margin: 5rem auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.main-text {
+  font-family: ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.sub-text {
+  font-family: overpass, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.intro-btn {
+  margin: 3rem 0;
+}
+
+.learn-more {
+  margin: 0 1.5rem;
+  background: inherit;
+  border: 1px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+}
+.learn-more:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+}
+
+.editor {
+  width: 100%;
+  padding: 5% 5% 0 5%;
+}
+
+.editor-heading {
+  text-align: center;
+  /* margin-bottom: 5rem; */
+  font-size: 3rem;
+  font-family: overpass, sans-serif;
+  color: hsl(237, 17%, 21%);
+  font-weight: 600;
+}
+
+.editor-features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editor-features-text {
+  padding: 12% 8%;
+}
+
+.editor-features-text h2,
+.laptop-text h2 {
+  font-size: 2rem;
+  font-family: overpass, sans-serif;
+  color: hsl(237, 17%, 21%);
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.editor-features-text p,
+.laptop-text p {
+  font-size: 1.2rem;
+  font-family: overpass, sans-serif;
+  color: hsl(237, 23%, 32%);
+  margin-bottom: 4rem;
+}
+
+#editor-image {
+  width: 50%;
+  height: 50%;
+}
+
+.mobile {
+  background: hsl(237, 17%, 21%);
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 80px;
+  height: 45vh;
+}
+
+.mobile-main-container {
+  display: flex;
+  padding: 0 6rem;
+  background: url(images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-position: -15% 150%;
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+
+.mobile-main-container img {
+  transform: translateY(-70px);
+}
+
+.mobile-text {
+  padding: 5% 7%;
+  font-family: overpass, sans-serif;
+  color: white;
+  margin-left: 5%;
+}
+
+.mobile-text h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.mobile-text p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.laptop {
+  padding: 7% 5%;
+}
+
+.laptop-main-container {
+  display: flex;
+}
+
+#laptop-image {
+  width: 50%;
+  height: 50%;
+}
+
+.laptop-text {
+  padding: 8%;
+}
+
+footer {
+  display: flex;
+  background: hsl(237, 17%, 21%);
+  justify-content: space-evenly;
+  padding-top: 3rem;
+  border-top-right-radius: 100px;
+}
+
+footer img {
+  width: 7rem;
+  height: 3rem;
+}
+
+footer div ul li,
+footer div h2 {
+  list-style-type: none;
+  color: white;
+  line-height: 2;
+}
+
+footer div h2 {
+  font-family: ubuntu, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+footer div ul li {
+  font-family: ubuntu, sans-serif;
+  font-weight: 300;
+}
+
+footer div ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  .intro-main-container {
+    height: 80vh;
+  }
+  .main-text {
+    font-size: 3rem;
+  }
+  .sub-text {
+    font-size: 1.2rem;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .intro-btn button {
+    margin-top: 1rem;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation nav {
+    display: block;
+    background: white;
+    position: absolute;
+    top: -100rem;
+    left: 3rem;
+    width: 85%;
+    height: 80%;
+    text-align: center;
+    padding: 2rem;
+    line-height: 2;
+    border-radius: 20px;
+    box-shadow: 0 7px 10px hsl(207, 13%, 34%);
+    transition: 0.5s;
+  }
+
+  nav.active {
+    top: 4rem;
+  }
+
+  .navigation nav ul {
+    display: block;
+    border-bottom: 1px solid hsl(240, 2%, 79%);
+  }
+
+  nav ul li a {
+    color: hsl(240, 10%, 16%);
+    font-size: 2rem;
+  }
+
+  nav ul li.sub-menu {
+    display: block;
+  }
+
+  .navigation nav ul li.active ul {
+    position: relative;
+    background: hsl(240, 2%, 79%);
+  }
+
+  .navigation nav ul li ul li {
+    width: 100%;
+  }
+
+  .navigation nav ul li ul a {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .navigation ul li.sub-menu::before {
+    content: url(images/icon-arrow-dark.svg);
+    position: absolute;
+    right: -20px;
+    transition: 300ms;
+  }
+
+  .navigation nav ul li.active::before {
+    content: url(images/icon-arrow-light.svg);
+    transform: rotate(180deg);
+    transition: 300ms;
+  }
+
+  .nav-btn button {
+    display: block;
+    color: hsl(240, 10%, 16%);
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    font-weight: 500;
+  }
+
+  .nav-btn .signup {
+    background: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+    color: white;
+  }
+
+  .editor-features {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .editor-heading {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .editor-features-text {
+    text-align: center;
+  }
+
+  #editor-image {
+    width: 100%;
+  }
+
+  .mobile {
+    width: 100vw;
+    height: 100%;
+  }
+  .mobile-main-container img {
+    width: 100vw;
+  }
+
+  .mobile-main-container {
+    transform: translateY(-30px);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background: url(images/bg-pattern-circles.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+
+  .mobile-text {
+    margin: 0;
+    text-align: center;
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  .mobile-text h2 {
+    padding: 0;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mobile-text p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .laptop-main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #laptop-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .laptop-text {
+    text-align: center;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer div {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  footer div h2 {
+    margin-bottom: 1rem;
+  }
+
+  footer div ul li {
+    font-size: 0.9rem;
+  }
+
+  footer img {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
